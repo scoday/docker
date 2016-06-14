@@ -46,13 +46,13 @@ gitlab:
 " > /gitlab/docker-compose.yml
 }
 
-show-docker-ids() {
-	docker ps
-}
-
 start-docker() {
 	cd /gitlab
 	docker-compose up -d
+}
+
+show-docker-ids() {
+	docker ps
 }
 
 create-btrfs
