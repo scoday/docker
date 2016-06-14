@@ -3,7 +3,7 @@
 # Use this guideline to make a gitlab on USB disks or 
 # realistically any type of disks. For this I used two
 # USB thumbs + btrfs mirror to create a docker gitlab.
-# Some data taken from here: https://blog.sixeyed.com/run-gitlab-on-a-usb-stick-with-docker/
+# Concept found here: https://blog.sixeyed.com/run-gitlab-on-a-usb-stick-with-docker/
 # The rest all from my cranial processing unit.
 # 
 
