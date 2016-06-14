@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 #
 # Use this guideline to make a gitlab on USB disks or 
 # realistically any type of disks. For this I used two
