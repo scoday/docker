@@ -1,0 +1,6 @@
+langage: php
+php:
+- 5.5
+- 5.4
+- hhvm
+script: phpunit phptest.php
