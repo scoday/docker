@@ -6,7 +6,7 @@ MAINTAINER "S. Michael Day" scoday@gmx.com
  	&& zypper in -y git-core openssh nginx quagga
 
 # Daemon Issue #
- 	RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
+ 	RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 
 # Set working directory
 	WORKDIR /etc/nginx
