@@ -11,8 +11,8 @@ MAINTAINER "S. Michael Day" scoday@gmx.com
 # Copy local Nginx Config --> /etc/nginx on Docker
 # use this method for other files, etc..
 
-	ADD nginx.conf /etc/nginx/
-	ADD start_nginx.sh /bin/
+	ADD ./conf/nginx.conf /etc/nginx/
+	ADD ./scripts/start_nginx.sh /bin/
 
 # Append daemon off to config."
  	RUN echo "daemon off;" >> /etc/nginx/nginx.conf
