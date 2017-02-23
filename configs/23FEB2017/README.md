@@ -6,15 +6,16 @@ or some automation tool can manipulate. Early stages now but it will
 grow...
 
 ## Concept
-  [git]
-    |
-    |
-[jenkins]---|
-	    |-->[saltstack]---|<DockerDev Repo>
-			      |-->[nginx.conf]
-			      |-->[w3]
-			      |-->[bash_script]
-	    		      |-->[Trigger Build + Docker run]
+      [git]
+        |
+        |
+    [jenkins]---|
+    	        |-->[saltstack]---|<DockerDev Repo>
+		 	          |-->[nginx.conf]
+			          |-->[w3]
+			          |-->[bash_script]
+	    		          |-->[Trigger Build + Docker run]
+
 Basically use SaltStack as it is intended however instead of maintaining
 systems states it will maintain Docker build file states.
 
