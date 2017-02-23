@@ -14,7 +14,7 @@ grow...
 		 	          |-->[nginx.conf]
 			          |-->[w3]
 			          |-->[bash_script]
-	    		          |-->[Trigger Build + Docker run]
+    		          |-->[Trigger Build + Docker run]
 
 Basically use SaltStack as it is intended however instead of maintaining
 systems states it will maintain Docker build file states.
