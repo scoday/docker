@@ -10,17 +10,20 @@ MAINTAINER "S. Michael Day" scoday@gmx.com
 	
 
 # Adding files into a container	ADD ./conf/nginx.conf /etc/nginx/
-	ADD ./conf/postgresql.conf /etc/sysconfig/postgresql
+	ADD ./conf/postgresql /etc/sysconfig/postgresql
 
 # Append something to a configuration file
 # 	RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 # Set working directory
-#	WORKDIR /etc/nginx
+#	WORKDIR $SOMEDIR
+	VOLUME /sys/fs/cgroup /run /tmp
 
-# Set Command
-# doesn't seem to work with openSUSE
-#	CMD /bin/start_nginx.sh 
+# Run some command
+#	CMD /bin/$some_shell.sh 
 
 # Ports
 	EXPOSE 5432
+
+# Testing service things and stuff
+#ENTRYPOINT service postgresql restart && bash
