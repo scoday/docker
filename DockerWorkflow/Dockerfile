@@ -8,6 +8,7 @@ MAINTAINER "S. Michael Day" scoday@gmx.com
 # Make DIRs && Add index.html
 	RUN mkdir -p /srv/www
 	ADD ./w3/index.html /srv/www/
+	ADD ./w3/Opensuse-logo-wob.sh.png /srv/www/
 
 # Remove Nginx Default
         RUN rm -v /etc/nginx/nginx.conf
