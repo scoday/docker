@@ -1,9 +1,13 @@
-#FROM scoday/opensuse-sandbox:new
-FROM os-sb02:dev
+FROM scoday/opensuse-sandbox:new
+#FROM os-sb02:dev
 MAINTAINER "S. Michael Day" scoday@gmx.com
 
  	RUN zypper up -y \
- 	&& zypper in -y dialog net-tools git-core openssh nginx quagga
+ 	&& zypper in -y dialog net-tools git-core openssh nginx quagga salt-minion
+
+# Make DIRs && Add index.html
+	RUN mkdir -p /srv/www
+	ADD ./w3/index.html /srv/www/
 
 # Remove Nginx Default
         RUN rm -v /etc/nginx/nginx.conf
