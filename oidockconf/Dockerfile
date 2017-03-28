@@ -1,27 +1,27 @@
-# HAProxy / Quagga
-# http://www.github.com/scoday/docker/haproxy
+# Atlassian Confluence Attempt 101
+# http://www.github.com/scoday/docker/oidockconf
 
 FROM opensuse:latest
 LABEL MAINTAINER "S. Michael Day"
-LABEL MAINTAINER "scoday709@outlook.com"
-LABEL com.calenergy.infra="CalEnergy.us"
-LABEL com.calenergy.infra="HAProxy"
+LABEL MAINTAINER "me@scoday.tokyo"
+LABEL com.calenergy.infra="CalEnergy"
+LABEL com.calenergy.infra="Confluence"
 LABEL version="1.0"
 
-# Install Things {haproxy,ruby,nginx,quagga,ssh}
+# Install Things 
 RUN \
-  zypper in -y quagga haproxy
+  zypper up -y && zypper in -y vim mysql tar gzip bzip nginx 
 
-# Add HAproxy Files:
-ADD haproxy.cfg /etc/haproxy/haproxy.cfg
-ADD start.bash /haproxy-start
+# Add required Files:
+# ADD haproxy.cfg /etc/haproxy/haproxy.cfg
+ADD files/atlassian-confluence-6.0.7-x64.bin /
 
 # Define mountable directories.
-VOLUME ["/leap42"]
+VOLUME ["/scratch"]
 VOLUME ["/dev/log"]
 
 # Define working directory.
-WORKDIR /etc/haproxy
+WORKDIR /opt/atlassian
 
 # Define default command.
 #CMD ["bash", "/haproxy-start"]
